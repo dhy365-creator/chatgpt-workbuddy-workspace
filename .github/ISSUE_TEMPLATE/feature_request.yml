@@ -1,28 +1,30 @@
-name: "💡 功能建议"
-description: "建议功能、改善安装体验或分享同屏协作方案"
+name: "💡 Feature idea / 功能建议"
+description: "Suggest a better workflow or installation experience / 提出功能改进建议"
 title: "[Idea]: "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        欢迎交流！当前版本主要负责 CodeBuddy 官方原生 Web 启动，并以**人工交接**实现 ChatGPT + CodeBuddy 同屏协作。其他 CLI 的自动集成并非现有功能。
+        All suggestions are welcome in English or 简体中文.
+        This package currently launches **CodeBuddy native Web** and uses **manual handoff** with ChatGPT; it does not automatically connect different AI agents.
+        欢迎中英文建议；当前仅提供 CodeBuddy 本地 Web 启动与人工协作，不具备不同 AI 的自动通信。
   - type: textarea
     id: problem
     attributes:
-      label: 你想解决什么问题？
-      placeholder: "描述你真实的使用场景和阻碍..."
+      label: Problem or use case / 你想解决什么问题？
+      placeholder: "Describe your actual scenario / 描述真实使用场景"
     validations:
       required: true
   - type: textarea
     id: idea
     attributes:
-      label: 你建议怎样改进？
-      placeholder: "期望流程、示例或交互方式..."
+      label: Proposed improvement / 你建议怎样改进？
+      placeholder: "What would the better workflow look like? / 期望怎样使用？"
     validations:
       required: true
   - type: textarea
     id: workaround
     attributes:
-      label: 你目前的解决方式（可选）
-      description: "请不要包含密码和私人会话信息。"
+      label: Current workaround / 当前解决方式（optional / 可选）
+      description: "Exclude passwords, private sessions and client data / 请勿提供私人信息"

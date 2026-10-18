@@ -1,5 +1,7 @@
 # Third-party software, interfaces, logos and screenshots
 
+**English** · [简体中文](THIRD_PARTY_NOTICES.zh-CN.md)
+
 **ChatGPT + WorkBuddy 同屏工作台** is an independent community project. It is not made, sponsored, approved or maintained by OpenAI, Tencent or the OpenCode developers.
 
 - **ChatGPT / OpenAI** names, UI elements and logos are associated with OpenAI.

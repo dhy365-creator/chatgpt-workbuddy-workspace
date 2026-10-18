@@ -1,6 +1,6 @@
 {
   "name": "workbuddy-native-web",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Unofficial ChatGPT + WorkBuddy side-by-side workspace powered by the official CodeBuddy CLI",
   "private": false,
   "license": "MIT",
@@ -15,11 +15,17 @@
     "bin/",
     "docs/",
     "README.md",
+    "README.zh-CN.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTING.zh-CN.md",
+    "SECURITY.md",
+    "SECURITY.zh-CN.md",
     "LICENSE",
-    "THIRD_PARTY_NOTICES.md"
+    "THIRD_PARTY_NOTICES.md",
+    "THIRD_PARTY_NOTICES.zh-CN.md"
   ],
   "scripts": {
-    "test": "node --test tests/npm-cli.test.cjs",
+    "test": "node --test tests/npm-cli.test.cjs tests/docs-locales.test.cjs",
     "pack:check": "npm pack --dry-run --json"
   },
   "homepage": "https://github.com/dhy365-creator/chatgpt-workbuddy-workspace#readme",
@@ -31,12 +37,16 @@
     "url": "https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues"
   },
   "keywords": [
-    "chatgpt",
-    "workbuddy",
-    "codebuddy",
-    "workspace",
     "agent",
+    "bilingual",
+    "chatgpt",
+    "cli",
+    "codebuddy",
+    "english",
+    "international",
     "npm",
-    "cli"
+    "simplified-chinese",
+    "workbuddy",
+    "workspace"
   ]
 }

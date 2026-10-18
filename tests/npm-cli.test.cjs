@@ -143,13 +143,15 @@ test('Mac/Windows safe npm CLI works with an isolated fake CodeBuddy',{timeout:2
   if(windows)f.env.WORKBUDDY_TEST_START_ACL=startAcl;
   assert.equal(cmd(['--help'],f.env).status,0);
   assert.match(cmd(['--help'],f.env).stdout,/install/);
-  assert.match(cmd(['--version'],f.env).stdout,/0\.2\.1/);
+  assert.match(cmd(['--version'],f.env).stdout,/0\.2\.2/);
   assert.equal(cmd(['setup','--project',f.workspace,'--port','not_a_port'],f.env).status,2);
   assert.equal(cmd(['setup','--project',path.join(f.root,'missing')],f.env).status,2);
   const initial=cmd(['doctor'],f.env);assert.equal(initial.status,0,initial.stderr);
+  f.env.WORKBUDDY_WEB_LANG = 'en';
   const installed=cmd(['install','--project',f.workspace,'--port',String(port)],f.env,150000);
   assert.equal(installed.status,0,installed.stderr+'\n'+installed.stdout);
   assert.match(installed.stdout,/GitHub Star/,'successful install should offer an optional Star link');
+  assert.match(installed.stdout,/installation complete/,'English install success text for international users');
   assert.match(installed.stdout,/https:\/\/github\.com\/dhy365-creator\/chatgpt-workbuddy-workspace/);
   assert.doesNotMatch(installed.stdout,/是否打开 GitHub/,'headless install must never block for input');
   assert.equal(installed.stdout.includes('TEST_ONLY_NOT_A_REAL_SECRET'),false);
@@ -172,6 +174,25 @@ test('Mac/Windows safe npm CLI works with an isolated fake CodeBuddy',{timeout:2
   assert.equal(await ping(port),false);
   assert.equal(cmd(['stop'],f.env).status,2);
   console.log('ISOLATED_QA_ROOT='+f.root);console.log('TEST_PORT='+port);
+});
+
+test('Installer supports Simplified Chinese opt-in text without headless blocking',
+  { timeout: 180000 }, async t => {
+  const f = fixture({ broad: windows });
+  t.after(() => stopOnlyFixture(f));
+  const port = await freePort();
+  writeConfig(f, port);
+  f.env.WORKBUDDY_WEB_LANG = 'zh-CN';
+  const installed = cmd(['install', '--project', f.workspace, '--port', String(port)], f.env, 150000);
+  assert.equal(installed.status, 0, installed.stderr + '\n' + installed.stdout);
+  assert.match(installed.stdout, /安装成功/, 'Chinese confirmation when zh-CN selected');
+  assert.match(installed.stdout, /项目地址/, 'Chinese Star project label');
+  assert.match(installed.stdout, /GitHub Star/, 'voluntary Star link remains available');
+  assert.doesNotMatch(installed.stdout, /是否打开 GitHub/, 'non-TTY must never wait for input');
+  assert.equal(await ping(port), true);
+  const stopped = cmd(['stop'], f.env, 60000);
+  assert.equal(stopped.status, 0, stopped.stderr);
+  assert.equal(await ping(port), false);
 });
 
 test('Windows: new private root repairs broad parent inheritance; repeat is stable',{skip:!windows,timeout:120000},async()=>{

@@ -1,108 +1,131 @@
-# ChatGPT + WorkBuddy 同屏工作台｜安装与使用图解
+# ChatGPT + WorkBuddy Side-by-Side Workspace — Installation Guide
 
-项目地址：[chatgpt-workbuddy-workspace](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace) · [问题反馈](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)
+**English** · [简体中文](INSTALL_WITH_CODEX.zh-CN.md) · [Back to README](../README.md)
 
-**本项目让 CodeBuddy CLI 启动官方本地 Web，便于与 ChatGPT 同屏协作。** ChatGPT 负责沟通、审核，CodeBuddy 负责具体执行；任务与结果目前通过**人工交接**，不是两个 AI 自动互联。
+This project launches the **official Tencent CodeBuddy CLI native Web UI**, so you can place it alongside ChatGPT in a compatible desktop client, or use tiled windows. **ChatGPT Chat plans and reviews. CodeBuddy executes. You manually hand tasks and results between them.** No proprietary model, browser extension, private MCP, or automatic agent-to-agent messaging is required.
 
-## 两种安装方式
+## Choose one installation method
 
-### A. 把仓库地址交给 Codex（推荐）
+### A. Ask Codex to install the GitHub repository
 
-在能操作你电脑的 Codex 中发送一句：
+Open a Codex session **authorized to execute local commands on your computer** and send:
 
-> 帮我安装这个项目：https://github.com/dhy365-creator/chatgpt-workbuddy-workspace
+> Install this project for me: https://github.com/dhy365-creator/chatgpt-workbuddy-workspace
 
-Codex 获取仓库后按根目录 [AGENTS.md](../AGENTS.md) 和 README 安装，不需要你复制长 Prompt。它会检查 Node.js（≥18.20）、npm、Git、CodeBuddy CLI，确认你授权的本机项目目录，再通过 npm 安装、配置和启动 Web。**操作系统/Codex 权限审批、个人账号登录仍需用户参与。**
+Codex reads this repo's [AGENTS.md](../AGENTS.md) and the instructions below, then checks Node, npm, Git and the official CodeBuddy CLI; requests your **existing, approved project directory**; installs the published helper; and starts the local Web UI. You don't need to copy a long installation prompt.
 
-仅发送裸 URL、没有安装意图，不代表允许它对电脑执行命令。普通 ChatGPT Chat 不具备自动获取本地终端的默认权限。
+**This is not automatic access granted by ChatGPT Chat.** Normal host/OS approvals still apply. Merely viewing the repository does not authorize installation.
 
-### B. 手动使用 npm 安装（不需要 Codex）
+### B. Install with npm yourself (no Codex needed)
+
+**Requirements:** macOS or Windows, Node.js **18.20+**, npm, Git, and an eligible CodeBuddy account. [Tencent's official English CodeBuddy CLI guide](https://www.codebuddy.ai/docs/cli/installation) uses the same npm package on both account regions.
 
 ```bash
-npm install -g github:dhy365-creator/chatgpt-workbuddy-workspace#v0.2.1
+npm install -g github:dhy365-creator/chatgpt-workbuddy-workspace#v0.2.2
 ```
 
-然后在对应系统的终端运行：
+The first command **only installs the helper**; it does not automatically start services, change OS permissions or authenticate for you.
 
-**Mac：**
+**macOS:**
 ```bash
 workbuddy-web install --project "/Users/you/Projects/demo"
 ```
 
-**Windows（CMD 或 Windows Terminal；.cmd 可规避某些 PowerShell 执行策略的限制）：**
+**Windows (Command Prompt / Windows Terminal):**
 ```bat
 workbuddy-web.cmd install --project "C:\Users\you\Documents\demo"
 ```
 
-项目目录必须**已经存在**，并由你明确授权。如果没有官方 CodeBuddy CLI，`workbuddy-web install` 会在这条明确的安装命令执行时尝试安装腾讯官方 npm 包。不会在 `npm install -g github:...` 阶段偷偷启动服务。首次 CodeBuddy 登录需要由你本人完成。
+The specified directory must already exist and be yours to work in. The helper checks for `codebuddy --version` and may install the official `@tencent-ai/codebuddy-code` CLI **when missing**. It then starts the vendor's native Web UI locally, with password authentication.
 
-### 安装完成后的地址
+**Windows PowerShell note:** If your execution policy blocks a `.ps1` command shim, execute `workbuddy-web.cmd` instead; you do **not** need to weaken system-wide PowerShell security policies.
+
+## 🌍 Domestic vs. international login and credits
+
+The official CodeBuddy CLI supports sign-in choices such as:
+
+- **Chinese Site** — regional Tencent Cloud sign-in for China.
+- **International Site** — international Tencent Cloud / [codebuddy.ai](https://www.codebuddy.ai/) account sign-in.
+- Other organization-specific methods may also be listed.
+
+Select the site that is actually appropriate for **your account and location**. You must log in using the **official CodeBuddy flow**; this open-source tool cannot change account regions, bypass restrictions or award credits.
+
+| Account region | Free plan noted by the official provider | Important details |
+| --- | --- | --- |
+| **International** | **100 base credits/month** | Limited-time **30/day bonus** has separate conditions: **Web-based conversations/tasks do not qualify**; only qualifying activity in an official WorkBuddy/CodeBuddy client may count. |
+| **China** | **500 base credits/month** | A different domestic plan, **not** the international Free tier. |
+
+Read [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing), [CodeBuddy international login](https://www.codebuddy.ai/docs/cli/quickstart), and [China domestic plans](https://www.workbuddy.cn/docs/workbuddy/Pricing) for current information. Checked October 18, 2026. Promotions, login availability, eligibility and model access can change. **Opening CodeBuddy Web using this project does not itself make you eligible for the 30/day activity reward.** Official [activity terms](https://www.codebuddy.ai/docs/workbuddy/Subscription). **No unlimited free tokens or worldwide equivalence is promised.**
+
+> **What about OpenCode?** You can manually apply the ChatGPT-plan/another-agent-executes workflow to any terminal or Web-enabled agent. This repository currently **only** automates CodeBuddy's native Web startup; it does **not** install OpenCode.
+
+## Nine real Windows installation screenshots
+
+These examples were captured on a **Chinese-language Windows deployment**. They show the **real CodeBuddy UI**, so some labels differ in the international edition. Screenshots are cropped to the relevant vendor window; sensitive Web passwords, secret-bearing URLs, private config paths and temporary authentication QR codes are redacted. **Follow the prompts shown on your own computer.**
+
+### 01 — Open the local CodeBuddy Web password page
+
+After startup, Codex or your terminal should display the local URL:
 
 ```text
 http://127.0.0.1:18862/
 ```
 
-网页使用 **CodeBuddy 官方原生 Web**，不是仓库另造的网页。**本地 Web 密码**和**个人 CodeBuddy 官方账号**是两层独立认证；本地服务 HTTP 200 不代表官方账号已登录。
+Open it in a browser. This is the **local CodeBuddy Web password page**, not the personal model-account login.
 
-**私密信息请只在自己的电脑查看，绝不向 Codex、ChatGPT 或 GitHub Issue 粘贴真实密码或带 `?password=` 的完整 URL。**
+![01 — Official CodeBuddy Web local password screen](images/01-sanitized.webp)
 
-## 九张 Windows 真机安装与操作截图
+### 02 — Find your local Web password
 
-这些截图来自作者实际 Windows 部署过程：为了让读者理解真实 UI，保留可公开的 CodeBuddy 页面与演示步骤，仅对敏感认证材料做**局部处理**。图中的扫码页面已移除临时认证二维码；扫码请使用你自己电脑上最新出现的二维码。
+Startup diagnostics may include the Web endpoint, the Web password or password-bearing local URL, the config location, Agent and permission mode. **Read the password only on your own computer** — do not paste it into ChatGPT, Codex or a public GitHub Issue.
 
-### 01｜打开本地 Web，出现密码登录页
+The example below hides the actual password and its query string.
 
-![01 CodeBuddy 官方 Web 本地密码登录](images/01-sanitized.webp)
+![02 — Local CLI startup output with private fields redacted](images/02-sanitized.webp)
 
-### 02｜从自己电脑查看启动信息和 Web 密码
+### 03 — Sign in to your official CodeBuddy account
 
-启动终端或仅当前用户可读的本地日志会显示 endpoint、登录密码及 Agent/Permission。下面仅隐去了密码、可复用的密码 URL 和私人配置路径，其余启动参数保留。
+Passing the **local Web password** opens the official account-login flow. You may need to choose **International Site** if you use a valid international account. A successful HTTP 200 or local password check does **not** prove that the account can use a specific model.
 
-![02 本地启动信息，密码及路径局部处理](images/02-sanitized.webp)
+![03 — Official CodeBuddy account sign-in](images/03-sanitized.webp)
 
-### 03｜输入 Web 密码后，进入 CodeBuddy 账号登录
+### 04 — Complete the supported account verification
 
-本地密码只是第一层。官方模型服务仍依赖你自己的 CodeBuddy 账号。
+Depending on site and account region, the official product may offer QR sign-in, email, phone or SSO. The screenshot shows the Chinese site's QR option; **the temporary login QR is intentionally removed**. Use only the live QR or login link generated on your own computer.
 
-![03 CodeBuddy 账号登录入口](images/03-sanitized.webp)
+![04 — Example QR sign-in page with temporary authentication QR removed](images/04-sanitized.webp)
 
-### 04｜根据官方页面提示登录／扫码
+### 05 — Return after successful sign-in
 
-示例里的临时二维码已移除，不能用于登录。你自己的二维码必须在自己设备上操作，不能公开分享。
+Once the official product confirms sign-in, return to the local Web UI.
 
-![04 官方登录方式，临时二维码已移除](images/04-sanitized.webp)
+![05 — Official account login success screen](images/05-sanitized.webp)
 
-### 05｜账号登录成功
+### 06 — Check the native Web workspace
 
-官方成功页面会提示返回 CLI 或原生 Web 继续使用。
+The main Web UI provides the vendor's native chat interface and a selected project directory. Confirm the directory matches your intended work — **a working directory is not an OS-level sandbox**.
 
-![05 官方 CodeBuddy 登录成功界面](images/05-sanitized.webp)
+![06 — Official native CodeBuddy Web chat](images/06-sanitized.webp)
 
-### 06｜进入原生 Web 聊天、选择项目目录
+### 07 — Select a model (subject to account entitlements)
 
-确认当前项目目录与你之前批准的路径相同；只设置工作目录**不是 OS 级沙箱**。
+Use the vendor's native model selector. Models, availability, free offers, and routing policies can differ across domestic/international accounts. `--permission-mode auto` does **not** mean unlimited tool permissions.
 
-![06 真实 CodeBuddy 原生会话页面](images/06-sanitized.webp)
+![07 — Native model selector](images/07-sanitized.webp)
 
-### 07｜选择账号可用模型与权限
+### 08 — Optionally try a small Agent or `/goal` task
 
-使用原生模型菜单；具体模型是否开放以个人 CodeBuddy 权益为准。默认 `auto` 不代表敏感工具操作会无限制自动执行。
+The screenshot shows a real Windows agent acceptance task. `/goal` may invoke models repeatedly and **use account credits**, so it is **not** run automatically by the installer. Test only in a directory you have authorized.
 
-![07 原生模型选择](images/07-sanitized.webp)
+![08 — Native agent goal execution in the original Chinese-language test](images/08-sanitized.webp)
 
-### 08｜按需执行 Agent 或 `/goal` 演示
+### 09 — Review the actual execution evidence
 
-演示来自原生 Web 的真实测试过程。Goal 可能连续消耗额度，**安装器不会在用户不知情时自动执行**。
+Successful installation, successful official account login, and successful **model/task execution** are separate milestones. Ask Codex to report exactly what was tested; **do not mark a model test PASS if it was not run**.
 
-![08 CodeBuddy 原生 Agent Goal 运行](images/08-sanitized.webp)
+![09 — Real task acceptance results](images/09-sanitized.webp)
 
-### 09｜审查真实任务结果与测试证据
-
-安装成功、账号登录和模型任务执行是三个不同验收层次；未实际使用账户/模型的安装不能宣称已完成模型调用验收。
-
-![09 CodeBuddy 真实任务验收](images/09-sanitized.webp)
-
-## 安装成功后的使用与维护
+## Useful commands and troubleshooting
 
 ```bash
 workbuddy-web --version
@@ -112,24 +135,26 @@ workbuddy-web start
 workbuddy-web stop
 ```
 
-`stop` 仅会尝试终止经过身份验证、由本工具创建的实例。占用端口属于其他服务时，不会自动停止它；不要直接按名称批量结束 Node 或 CodeBuddy 进程。
+If `127.0.0.1:18862` is already in use, inspect which process owns it before changing ports. **Never kill unknown CodeBuddy or Node processes by name.** Only stop a process verified as created by this tool.
 
-在支持本地网页的 ChatGPT 右侧面板打开 `http://127.0.0.1:18862/`，即可在同一窗口与 ChatGPT 并列使用；客户端不支持时可以使用系统并排窗口。作者实际用过个人 Local MCP 增强本机操作，但**本开源仓库不安装、不要求、不讲解其私人 MCP**。
+If a local Web page works but models are unavailable, confirm your **official account site**, your account's free/paid entitlements, vendor service availability and the CodeBuddy CLI version. International-site login and current credits are governed by the provider; this repo does not route models or transfer credits.
 
-### ⭐ 自愿支持作者
+If the Codex execution window is closed, run `workbuddy-web status` to check whether the native Web service is still alive. **Automatic restart after a computer reboot is not promised.**
 
-当 `workbuddy-web install` 确认 Web 已成功启动，会显示一次 GitHub Star 邀请：终端用户按 `y` 后仅打开 GitHub 项目页面，最终是否点 Star 由本人决定；15 秒不回应就跳过。在 Codex 等非交互式执行环境只显示链接，不等待输入，不会自动点赞。
+## Language settings for the launcher prompt
 
-### 有问题直接反馈到 GitHub
+The optional installation-success/Star text follows your terminal locale by default. To force English when you run the helper, set environment variable `WORKBUDDY_WEB_LANG=en`. For Simplified Chinese, choose `WORKBUDDY_WEB_LANG=zh-CN`.
 
-[打开 **Issues / 提交问题**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)。请选择「Bug / 安装问题」或「功能建议」，说明系统、Node/npm/CLI 版本及复现步骤，不要贴密码、Token、Cookie、临时二维码或私人工作目录内容。
+This affects only the helper's own prompt, **not the vendor CodeBuddy Web language, model settings, or account region**.
 
-### 已知边界
+## ⭐ Optional GitHub Star
 
-- 目前是 **CodeBuddy-only** 的第三方 Web 启动工具；OpenCode 等产品只是人工协作思路示例，未被这个包自动安装或集成。
-- **ChatGPT Chat 不会因为安装此包就自动获得操作本机的权限。** 两个 AI 通过人传任务和结果，不是自动相互通信。
-- 不自动建立系统级开机启动。关闭 Codex 后服务是否继续运行，请用 `workbuddy-web status` 检查。
-- 默认绑定 `127.0.0.1`、本地密码认证和 `auto` 权限，禁止 `--auth none`、`0.0.0.0` 和 bypassPermissions。
-- 本项目不提供腾讯官方二进制，也不代表腾讯或 OpenAI 官方。
+After `workbuddy-web install` successfully starts the official Web service, an **optional** prompt asks whether to open the project on GitHub. Press **y** to open its page and click Star yourself. The prompt times out after 15 seconds, and non-interactive Codex sessions show a link without waiting. You can always skip it; no automatic starring or GitHub credential collection occurs.
 
-参考：[CodeBuddy 官方安装](https://www.codebuddy.cn/docs/cli/installation) · [官方 Web UI](https://www.codebuddy.cn/docs/cli/web-ui)。
+## 🐛 Feedback from anywhere
+
+Use [GitHub Issues](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose) for **bugs or feature suggestions**. You can attach **redacted** screenshots or log summaries, but never include passwords, cookies, token-bearing URLs, temporary login QR codes, private client files or actual chat transcripts.
+
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for pull requests, or report security vulnerabilities through the repository's **private** [security advisories](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/security/advisories/new).
+
+**Disclaimer:** An unofficial independent open-source launcher; not affiliated with OpenAI, Tencent or OpenCode. No vendor CLI binaries are included. [CodeBuddy installation docs](https://www.codebuddy.ai/docs/cli/installation) · [CodeBuddy CLI quickstart](https://www.codebuddy.ai/docs/cli/quickstart).
