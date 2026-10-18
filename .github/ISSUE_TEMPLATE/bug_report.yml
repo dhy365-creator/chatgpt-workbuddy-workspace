@@ -1,0 +1,63 @@
+name: "🐛 Bug / 安装问题"
+description: "反馈 Mac / Windows 安装、启动或使用问题"
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。**请勿提交密码、Token、Cookie、扫码二维码、真实会话、个人工作目录或其他敏感资料。** 私密漏洞请使用仓库的 Security 页面。
+  - type: dropdown
+    id: os
+    attributes:
+      label: 操作系统
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: 安装方式
+      options:
+        - 复制 GitHub 地址给 Codex
+        - 手动 npm 安装
+        - 其他方式
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      description: "Node.js / npm / CodeBuddy CLI / workbuddy-web 版本（不可粘贴 Token）"
+      placeholder: "Node 24.x；npm 11.x；CodeBuddy 2.x；workbuddy-web 0.2.1"
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: "尽量写出从安装到出现问题的最小步骤"
+      placeholder: "1. ...
+2. ...
+3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为与报错（请先脱敏）
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他补充（可选）
+      description: "你尝试过的解决方案、已脱敏的截图等"

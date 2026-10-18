@@ -1,0 +1,23 @@
+# The repository must never include locally generated user data or credentials.
+.env
+.env.*
+*.log
+*.pid
+*.local
+.codebuddy/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+.private/
+runtime/
+credentials/
+
+# Public source must never contain local test builds or user state
+*.tgz
+coverage/
+.npm/
+temp/
+Temp/
+*.bak
+*.private

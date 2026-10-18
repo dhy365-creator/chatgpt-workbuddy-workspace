@@ -1,0 +1,42 @@
+{
+  "name": "workbuddy-native-web",
+  "version": "0.2.1",
+  "description": "Unofficial ChatGPT + WorkBuddy side-by-side workspace powered by the official CodeBuddy CLI",
+  "private": false,
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "workbuddy-web": "bin/workbuddy-web.js"
+  },
+  "engines": {
+    "node": ">=18.20.0"
+  },
+  "files": [
+    "bin/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "test": "node --test tests/npm-cli.test.cjs",
+    "pack:check": "npm pack --dry-run --json"
+  },
+  "homepage": "https://github.com/dhy365-creator/chatgpt-workbuddy-workspace#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhy365-creator/chatgpt-workbuddy-workspace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues"
+  },
+  "keywords": [
+    "chatgpt",
+    "workbuddy",
+    "codebuddy",
+    "workspace",
+    "agent",
+    "npm",
+    "cli"
+  ]
+}

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "🔐 私密安全报告"
+    url: https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/security/advisories/new
+    about: "涉及凭证、ACL、认证绕过等漏洞请通过私密安全报告，不要公开披露。"

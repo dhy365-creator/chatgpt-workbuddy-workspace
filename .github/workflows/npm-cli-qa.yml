@@ -1,0 +1,35 @@
+name: Native Web npm CLI QA
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'bin/**'
+      - 'tests/npm-cli.test.cjs'
+      - 'package.json'
+      - '.github/workflows/npm-cli-qa.yml'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  isolated-npm-smoke:
+    name: Isolated npm smoke (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Run isolated fake-CLI tests
+        run: npm test
+      - name: Verify package contents
+        run: npm pack --dry-run --json

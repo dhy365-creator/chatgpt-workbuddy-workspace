@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="580" viewBox="0 0 1600 580" role="img" aria-label="ChatGPT 和已有免费积分、免费模型与订阅权益的协作模式">
+<defs><filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#71877b" flood-opacity=".12"/></filter></defs>
+<rect width="1600" height="580" fill="#FFFFFF"/>
+<text x="70" y="90" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="44" fill="#202924" font-weight="750">把沟通留给 ChatGPT，把执行交给更合适的 AI</text>
+<text x="72" y="137" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="24" fill="#677772" font-weight="400">合理使用已有免费积分与模型权益，增加一条开发途径</text>
+<rect x="62" y="187" width="450" height="305" rx="25" fill="#F4FAF8" stroke="#DAEBE4" stroke-width="2" filter="url(#shadow)"/>
+<circle cx="127" cy="249" r="30" fill="#D8EEE5"/>
+<text x="116" y="260" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="28" fill="#2B956E" font-weight="750">C</text>
+<text x="172" y="255" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="31" fill="#243F35" font-weight="700">ChatGPT Chat</text>
+<text x="104" y="342" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="25" fill="#476057" font-weight="400">讨论需求 · 协调任务</text>
+<text x="104" y="382" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="25" fill="#476057" font-weight="400">审查结果 · 继续迭代</text>
+<rect x="104" y="422" width="269" height="41" rx="20" fill="#EAF7F1" stroke="#EAF7F1" stroke-width="2"/><text x="122" y="450" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="19" fill="#208364" font-weight="550">作为主工作台（可选）</text>
+<text x="539" y="350" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="46" fill="#C7A14E" font-weight="700">+</text>
+<rect x="583" y="187" width="450" height="305" rx="25" fill="#FFFBF4" stroke="#EEDFB7" stroke-width="2" filter="url(#shadow)"/>
+<circle cx="647" cy="249" r="30" fill="#FCEBC0"/>
+<text x="632" y="260" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="28" fill="#B58B37" font-weight="750">¥</text>
+<text x="695" y="255" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="29" fill="#544220" font-weight="700">CodeBuddy / WorkBuddy</text>
+<text x="620" y="335" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="23" fill="#614E32" font-weight="400">国内个人体验版</text>
+<text x="620" y="409" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="58" fill="#C49A41" font-weight="750">500</text>
+<text x="771" y="410" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="24" fill="#7B633D" font-weight="400">积分 / 月*</text>
+<rect x="620" y="430" width="346" height="41" rx="20" fill="#F9EDCF" stroke="#F9EDCF" stroke-width="2"/><text x="638" y="458" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="19" fill="#957734" font-weight="550">同账号权益按官方规则共享</text>
+<text x="1055" y="350" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="46" fill="#C7A14E" font-weight="700">+</text>
+<rect x="1100" y="187" width="433" height="305" rx="25" fill="#F8F9FA" stroke="#E4E8E9" stroke-width="2" filter="url(#shadow)"/>
+<circle cx="1161" cy="249" r="30" fill="#E9EDF0"/>
+<text x="1146" y="258" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="25" fill="#6C7985" font-weight="750">&gt;_</text>
+<text x="1206" y="255" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="31" fill="#36424B" font-weight="700">OpenCode</text>
+<text x="1141" y="344" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="24" fill="#58666A" font-weight="400">部分免费模型 / 试用权益</text>
+<text x="1141" y="382" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="20" fill="#7A8388" font-weight="400">不同供应商额度可能不同</text>
+<rect x="1141" y="430" width="344" height="41" rx="20" fill="#EDF0F2" stroke="#EDF0F2" stroke-width="2"/><text x="1159" y="458" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="19" fill="#64727B" font-weight="550">其他 CLI 可借鉴此用法</text>
+<text x="72" y="537" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="19" fill="#78837F" font-weight="400">* 信息核对日期：2026-10-18。积分、Token 与免费模型会调整，以各平台最新公告及条款为准。</text>
+<text x="72" y="570" font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" font-size="17" fill="#9AA6A1" font-weight="400">不转换不同平台的额度，不绕过积分限制，不承诺永久免费。</text>
+</svg>
