@@ -203,11 +203,23 @@ async function doctor() {
   }, null, 2) + '\n');
   if (!nodeOK()) fail('Node.js >=18.20 required');
 }
+function interfaceLanguage() {
+  const configured = String(
+    process.env.WORKBUDDY_WEB_LANG ||
+    process.env.LC_ALL || process.env.LC_MESSAGES || process.env.LANG ||
+    Intl.DateTimeFormat().resolvedOptions().locale || 'en'
+  );
+  return /^zh(?:[_-]|$)/i.test(configured) ? 'zh' : 'en';
+}
+
 async function offerVoluntaryStar() {
   // Never open a browser automatically and never run this as npm postinstall.
   // In Codex/headless sessions, return a clickable link instead of waiting for input.
-  process.stdout.write('\n⭐ WorkBuddy Bridge 安装成功。若这个项目对你有帮助，欢迎自愿给作者点一个 GitHub Star。\n');
-  process.stdout.write('项目地址：' + STAR_REPO_URL + '\n');
+  const chinese = interfaceLanguage() === 'zh';
+  process.stdout.write(chinese
+    ? '\n⭐ WorkBuddy Bridge 安装成功。如有帮助，欢迎自愿给项目一个 GitHub Star。\n'
+    : '\n⭐ WorkBuddy Bridge installation complete. If you find it useful, a voluntary GitHub Star is appreciated.\n');
+  process.stdout.write((chinese ? '项目地址：' : 'Project: ') + STAR_REPO_URL + '\n');
   if (!process.stdin.isTTY || !process.stdout.isTTY) return;
   const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
   let answer;
@@ -224,7 +236,7 @@ async function offerVoluntaryStar() {
       // A Codex terminal may have a PTY but no human at the keyboard.
       // Default to No after a short timeout; never stall completed installation.
       timer = setTimeout(() => { rl.close(); finish(''); }, 15000);
-      rl.question('是否打开 GitHub 项目页？[y/N] ', finish);
+      rl.question(chinese ? '是否打开 GitHub 项目页？[y/N] ' : 'Open the GitHub project page? [y/N] ', finish);
     });
   } finally {
     rl.close();
@@ -237,10 +249,10 @@ async function offerVoluntaryStar() {
     const child = cp.spawn(cmd, [STAR_REPO_URL], {
       stdio: 'ignore', detached: true, windowsHide: true, shell: false
     });
-    child.on('error', () => process.stderr.write('无法自动打开浏览器，请手动访问：' + STAR_REPO_URL + '\n'));
+    child.on('error', () => process.stderr.write((chinese ? '无法打开浏览器，请自行访问：' : 'Could not open your browser. Visit: ') + STAR_REPO_URL + '\n'));
     child.unref();
   } catch {
-    process.stderr.write('请手动访问：' + STAR_REPO_URL + '\n');
+    process.stderr.write((chinese ? '请手动访问：' : 'Visit the project manually: ') + STAR_REPO_URL + '\n');
   }
 }
 async function setup(options, autoStart) {

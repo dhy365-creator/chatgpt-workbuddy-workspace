@@ -1,15 +1,21 @@
-## 修改目的
-请链接相关 Issue，描述这次修改如何帮助 ChatGPT + WorkBuddy 同屏工作台用户。
+## Purpose / 修改目的
 
-## 改动摘要
-<!-- 尽量保持小范围；不附私人会话、密码、Token、二维码、客户目录。 -->
+Link the related Issue and explain the benefit to users. / 请关联 Issue，说明改善了什么。
 
-## 验证
-- [ ] `npm test` 已通过；Windows 专项测试注明系统环境
-- [ ] `git diff --check` 已通过
-- [ ] `npm pack --dry-run` 内容已检查
-- [ ] 如修改 Web 启动/权限，验证只监听 127.0.0.1、密码认证和安全停止
-- [ ] 如修改安装提示或链接，未引入自动点赞、强制登录或秘密采集
+## Changes / 改动摘要
 
-## 风险与回滚
-<!-- 哪些平台受到影响？如何撤销？ -->
+<!-- Keep changes focused. Never attach passwords, tokens, QR codes, private sessions or client data.
+     请保持变更范围可审核，禁止附加密码、Token、二维码、私人会话或客户资料。 -->
+
+## Verification / 测试
+
+- [ ] `npm test` passes (state OS; Windows ACL-specific cases require Windows).
+- [ ] `git diff --check` passes.
+- [ ] `npm pack --dry-run` contains only approved files.
+- [ ] If modifying launch/auth, verify loopback-only, password auth, and safe stop.
+- [ ] If modifying docs or regional benefits, update **English and 简体中文** and cite official terms.
+- [ ] Optional Star prompt never blocks install, auto-stars, or collects credentials.
+
+## Risk and rollback / 风险与回退
+
+Which platforms change and how do you roll back? / 哪些平台受影响，如何撤回？

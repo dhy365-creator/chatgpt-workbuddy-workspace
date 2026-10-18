@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="625" viewBox="0 0 1600 625" role="img" aria-label="Four cards: ChatGPT planning, international 100 credits, China 500 credits, selected OpenCode free models">
+<defs><filter id="soft"><feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#92ADA3" flood-opacity=".17"/></filter></defs>
+<rect x="0" y="0" width="1600" height="625" rx="0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="63" y="81" font-family="Arial,Helvetica,sans-serif" font-size="44" fill="#172A23" font-weight="700">Use the plans and credits you already have</text>
+<text x="65" y="127" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#66786F" font-weight="400">Different regions. Different entitlements. One flexible manual workflow.</text>
+<rect x="60" y="179" width="342" height="338" rx="24" fill="#F3FBF7" stroke="#DCEFE5" stroke-width="2" filter="url(#soft)"/>
+<rect x="87" y="211" width="286" height="55" rx="15" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="102" y="245" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#263B34" font-weight="700">ChatGPT Chat</text>
+<text x="87" y="314" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#53685C" font-weight="500">Plan and coordinate</text>
+<text x="87" y="381" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#2A966C" font-weight="550">Review and approve</text>
+<text x="87" y="425" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#687B70" font-weight="400">Task review + handoff</text>
+<rect x="83" y="460" width="295" height="33" rx="16" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="96" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#2A966C" font-weight="600">Main workspace</text>
+<rect x="445" y="179" width="342" height="338" rx="24" fill="#FFF9F1" stroke="#EADFCB" stroke-width="2" filter="url(#soft)"/>
+<rect x="472" y="211" width="286" height="55" rx="15" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="487" y="245" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#263B34" font-weight="700">WorkBuddy / CodeBuddy</text>
+<text x="472" y="314" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#53685C" font-weight="500">International Free plan</text>
+<text x="472" y="394" font-family="Arial,Helvetica,sans-serif" font-size="49" fill="#B98930" font-weight="750">100</text>
+<text x="472" y="425" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#687B70" font-weight="400">100 base credits / mo</text>
+<rect x="468" y="460" width="295" height="33" rx="16" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="481" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#B98930" font-weight="600">Conditional: +30 / active day</text>
+<rect x="830" y="179" width="342" height="338" rx="24" fill="#F6F8FC" stroke="#DEE7F2" stroke-width="2" filter="url(#soft)"/>
+<rect x="857" y="211" width="286" height="55" rx="15" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="872" y="245" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#263B34" font-weight="700">WorkBuddy / CodeBuddy</text>
+<text x="857" y="314" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#53685C" font-weight="500">China personal trial</text>
+<text x="857" y="394" font-family="Arial,Helvetica,sans-serif" font-size="49" fill="#477CA8" font-weight="750">500</text>
+<text x="857" y="425" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#687B70" font-weight="400">500 base credits / mo</text>
+<rect x="853" y="460" width="295" height="33" rx="16" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="866" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#477CA8" font-weight="600">Different regional offer</text>
+<rect x="1215" y="179" width="342" height="338" rx="24" fill="#F8F7FC" stroke="#E8E2F5" stroke-width="2" filter="url(#soft)"/>
+<rect x="1242" y="211" width="286" height="55" rx="15" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1257" y="245" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#263B34" font-weight="700">OpenCode Zen</text>
+<text x="1242" y="314" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#53685C" font-weight="500">Selected free models</text>
+<text x="1242" y="394" font-family="Arial,Helvetica,sans-serif" font-size="49" fill="#7763B6" font-weight="750">Free</text>
+<text x="1242" y="425" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#687B70" font-weight="400">Subject to availability</text>
+<rect x="1238" y="460" width="295" height="33" rx="16" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1251" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#7763B6" font-weight="600">Not auto-installed here</text>
+<text x="65" y="565" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#637970" font-weight="400">Checked Oct 18, 2026. Promotional bonuses and free-model limits can change.</text>
+<text x="65" y="598" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#8D9F95" font-weight="400">No unlimited free tokens, credit transfers, or automatic integrations are promised.</text>
+</svg>

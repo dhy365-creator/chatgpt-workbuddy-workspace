@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'bin/**'
-      - 'tests/npm-cli.test.cjs'
+      - 'tests/**'
       - 'package.json'
       - '.github/workflows/npm-cli-qa.yml'
   push:

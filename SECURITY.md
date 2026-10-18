@@ -1,5 +1,7 @@
 # Security policy / 安全反馈
 
+**English** · [简体中文](SECURITY.zh-CN.md)
+
 If you discover a security vulnerability, **do not publish credentials, Web passwords, local paths with secrets, QR codes, tokens, personal sessions, proof-of-concept exploits or vulnerable private endpoints in a public Issue**.
 
 Use [GitHub Private Vulnerability Reporting](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/security/advisories/new) where available. This sends details privately to maintainers. If the button is unavailable, open a **non-sensitive** Issue saying you need a private way to share a security finding; do not expose exploitation details publicly.

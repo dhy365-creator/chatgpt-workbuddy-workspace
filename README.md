@@ -1,76 +1,98 @@
-# ChatGPT + WorkBuddy 同屏工作台
+# ChatGPT + WorkBuddy — Side-by-Side Workspace
 
-**一个窗口，两个 AI。ChatGPT 负责沟通与验收，CodeBuddy 负责执行开发任务。**
+**English** · [简体中文](README.zh-CN.md)
 
-用 ChatGPT Chat 作为日常主工作台，在支持右侧网页面板的客户端中打开本地 CodeBuddy Web，减少反复切换 App。更重要的是：**按各平台规则利用已有免费积分、免费模型或订阅权益，为自己增加一条低成本的 AI 开发途径。**
+**One workspace. Multiple AI options. Less app switching — and more ways to use the free credits you already have.**
 
-![实际界面：ChatGPT 与 CodeBuddy 在同一窗口并排使用](docs/images/workspace-side-by-side.webp)
+Plan, coordinate, and review your work in **ChatGPT Chat**, while **CodeBuddy CLI** handles coding, terminal commands, file edits, and agent execution in its **official local Web UI**. Place them side by side in a compatible desktop client, or use two tiled windows.
 
-> 📷 **真实 Mac 工作界面。** 左侧截图当时处于 ChatGPT 的 **Work** 页面，右侧是 CodeBuddy 官方原生 Web；作者在 Mac/Windows 也实际使用 **Chat 模式**沟通与验收。右侧面板属于所用客户端的界面能力，不是本项目制造的 ChatGPT 组件；客户端不支持网页侧栏时，可采用浏览器或系统并排窗口。本项目不提供自动跨 AI 通信。
+![Real-world screenshot: ChatGPT and CodeBuddy side by side](docs/images/workspace-side-by-side.webp)
 
-[🚀 安装说明](#-快速安装mac--windows) · [📸 九张真实安装截图](docs/INSTALL_WITH_CODEX.md) · [🐛 反馈问题 / 提建议](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose) · [🤝 参与贡献](CONTRIBUTING.md)
+> **Actual setup, not a fabricated UI.** The screenshot shows **ChatGPT Work** selected on the left and CodeBuddy's official local Web UI on the right. The author also uses **Chat mode** for planning and reviewing. Whether a local webpage can be embedded in a side panel depends on your ChatGPT/client version; tiled windows are a fallback. This repository does **not** add a ChatGPT side panel or enable automatic communication between AI tools.
 
-## ✨ 为什么值得尝试？
+[**Install**](#-install-on-macos--windows) · [**Step-by-step English guide**](docs/INSTALL_WITH_CODEX.md) · [**Report a bug / Suggest a feature**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose) · [**Contribute**](CONTRIBUTING.md)
 
-- **少切换软件**：在 ChatGPT 聊天窗口旁打开 CodeBuddy 本地 Web，边讨论任务，边查看执行结果。
-- **多一条开发途径**：ChatGPT Chat 做需求整理、代码评审与验收；CodeBuddy CLI 可以执行文件、终端、代码开发等具体任务，**并非取代 Codex**。
-- **合规利用已有免费权益**：腾讯 CodeBuddy / WorkBuddy 国内个人**体验版**官方列示 **500 基础积分/月**，同账号积分共享；OpenCode Zen 官方列有部分标记为 **Free** 的模型。按照各平台具体地区、账号与限制使用，不承诺永久免费、无限 Token 或不同平台额度互转。
-- **不重新开发聊天前端**：本仓库是第三方的 CodeBuddy **官方原生 Web 启动与安全配置工具**，模型选择、Agent、会话及 `/goal` 等功能均由官方 CLI 提供。
+## ✨ Why does this project exist?
 
-![ChatGPT 讨论与验收，CodeBuddy 等 AI 工具负责执行](docs/images/vision-main-workspace.svg)
+You probably already have an AI assistant you like. But coding agents live in separate tools, which means switching apps, repeating context, and manually reviewing results. This project provides **one more practical AI development workflow**:
 
-![在平台规则允许范围内使用免费积分和模型](docs/images/vision-free-credits.svg)
+- **ChatGPT Chat** — clarify goals, break down tasks, write acceptance criteria, review results.
+- **CodeBuddy CLI / WorkBuddy ecosystem** — use CodeBuddy's native Web UI to run programming agents, edit files, and execute tests.
+- **You** — hand the task brief to CodeBuddy and return its commit links or test output to ChatGPT. **Human-in-the-loop**, not automatic cross-agent messaging.
+- **Your existing Codex workflow stays intact.** This is an additional execution option, not a Codex replacement.
 
-**官方权益参考：** [CodeBuddy / WorkBuddy 个人定价](https://www.codebuddy.cn/docs/ide/Account/pricing) · [OpenCode Zen 模型与价格](https://opencode.ai/docs/zen/)。上述政策会调整，请以使用当日官方实际权益为准。
+![Human-mediated AI workflow: ChatGPT for planning and reviews, coding agents for execution](docs/images/vision-main-workspace.en.svg)
 
-## 🔁 一种简单、可复现的协作流程
+### 💸 Free credits can make another workflow worth trying
 
-1. **ChatGPT Chat**：沟通需求，制定任务书、测试与验收条件。
-2. **CodeBuddy Web / CLI**：将任务交给 Agent，执行开发、文件操作或测试。
-3. **人工交接**：将提交记录、测试结果或执行报告反馈给 ChatGPT。
-4. **ChatGPT Chat**：复核结果，指出问题，需要时再交给 Agent 修复。
+**You don't have to subscribe to every coding-agent provider to experiment with the tools they offer.** Different platforms have different free tiers, trial credits, free models, and paid subscription allowances. Use them only where you are eligible, under each provider's current terms.
 
-**关键区别：这是“同屏协作 + 人工交接”，不是 ChatGPT 与 CodeBuddy 自动互发消息。** 不要求作者的私人 MCP 工具，也没有绕过 ChatGPT 或 CodeBuddy 的权限规则。
+| Provider / account region | Official free-plan information | Important distinction |
+| --- | --- | --- |
+| **WorkBuddy / CodeBuddy — International** | **100 base credits/month**; an additional **30 credits per active day** may be available during a limited-time promotion. | Daily rewards and promotional model access have eligibility rules and can change. |
+| **WorkBuddy / CodeBuddy — China** | **500 base credits/month** on the domestic personal trial tier. | **Not** the same entitlement as the international Free plan. |
+| **OpenCode Zen** | Certain listed models are marked **Free**. | Free-model availability, limits, and provider requirements vary. **This repository does not install OpenCode.** |
 
-本仓库当前**只负责 CodeBuddy CLI 的原生 Web 部署**。OpenCode、OpenClaw 及其他 CLI 仅是可以借鉴同屏协作思路的工具，并未通过本仓库完成一键安装或自动互通。
+Sources: [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing) · [CodeBuddy international pricing](https://www.codebuddy.ai/docs/ide/Account/pricing) · [China domestic plan](https://www.workbuddy.cn/docs/workbuddy/Pricing) · [OpenCode Zen](https://opencode.ai/docs/zen/). Checked October 18, 2026; **always confirm current terms**. No unlimited tokens, credit transfers, or quota bypasses are promised.
 
-## 🚀 快速安装（Mac / Windows）
+![Regional free-plan differences and optional free-model execution paths](docs/images/vision-free-credits.en.svg)
 
-有两种方式；**不需要作者自行开发的 Local MCP**。
+### 🌍 One CLI, different regional account sign-ins
 
-### 方式 A：把仓库地址发给 Codex
+Tencent's **official CodeBuddy CLI** offers both **Chinese Site** and **International Site** authentication choices. Overseas users can choose **International Site** when they log in through the official product; the npm package used for the CLI is still `@tencent-ai/codebuddy-code`.
 
-在能执行本机命令的 Codex 中发送：
+[CodeBuddy's official English CLI quickstart](https://www.codebuddy.ai/docs/cli/quickstart) documents the regional login choices. **This project does not switch your account region, grant credits, or guarantee that every feature works in every country.** The author has tested local Web startup on Mac and Windows, but has not independently validated every international account's model access.
 
-> 帮我安装这个项目：https://github.com/dhy365-creator/chatgpt-workbuddy-workspace
+## 🔁 The side-by-side workflow (no automatic AI-to-AI messaging)
 
-Codex 可读取仓库根目录的 [AGENTS.md](AGENTS.md) 与 [详细安装指南](docs/INSTALL_WITH_CODEX.md)，依照你给予的权限检查环境、安装必要依赖、让你选择本地项目目录并启动 CodeBuddy Web。**不需要复制长篇 Prompt。** 需要的文件操作与系统权限仍须正常审批。
+1. **Plan in ChatGPT Chat:** explain the desired result, deliverables, and tests.
+2. **Run in CodeBuddy Web:** copy the task into the agent on the right; let the official CLI execute.
+3. **Bring back evidence:** copy non-sensitive test results, file diffs, or Git commit links.
+4. **Review in ChatGPT:** approve the result or request another iteration.
 
-### 方式 B：自己使用 npm 安装（无需 Codex）
+This is **side-by-side use with manual handoff**. Simply installing this package does **not** give ChatGPT Chat access to your computer, your credentials, or CodeBuddy's API.
 
-电脑需要 **Node.js ≥18.20**、npm、Git，以及你本人有权使用的 CodeBuddy 账号。安装启动工具：
+Other CLI agents (such as OpenCode) can be used with a **similar manual workflow** if they provide a suitable terminal or Web UI. **This project currently installs and launches CodeBuddy only.**
+
+## 🚀 Install on macOS & Windows
+
+Choose either installation route. Neither requires the author's private Local MCP tools.
+
+### Option A — Give the repository URL to Codex
+
+Open a **Codex session with authorized access to your local computer** and send:
+
+> Install this project for me: https://github.com/dhy365-creator/chatgpt-workbuddy-workspace
+
+Codex can read [AGENTS.md](AGENTS.md) and the [English walkthrough](docs/INSTALL_WITH_CODEX.md), check your environment, request a project folder, install the helper and launch the official Web UI. **No lengthy install prompt to copy.** Local command execution still requires normal user/host permissions; an unsolicited URL alone is not approval.
+
+### Option B — Install directly with npm (no Codex required)
+
+You need Node.js **18.20+**, npm and Git. From a terminal:
 
 ```bash
-npm install -g github:dhy365-creator/chatgpt-workbuddy-workspace#v0.2.1
+npm install -g github:dhy365-creator/chatgpt-workbuddy-workspace#v0.2.2
 ```
 
-选择**已存在的、经你同意的项目目录**，完成官方 CodeBuddy CLI 检测/按需安装并启动 Web：
+Then choose an **existing folder you have approved** as CodeBuddy's working directory.
 
-**macOS 示例：**
+**macOS:**
 ```bash
 workbuddy-web install --project "/Users/you/Projects/demo"
 ```
 
-**Windows Terminal / CMD 示例：**
+**Windows (CMD / Windows Terminal):**
 ```bat
 workbuddy-web.cmd install --project "C:\Users\you\Documents\demo"
 ```
 
-运行成功后，在本机浏览器打开 **http://127.0.0.1:18862/**，从**自己电脑的启动终端或私有日志**查看本地 Web 登录密码，并按官方流程登录 CodeBuddy 账号。首次密码输入与扫码登录需要本人完成；**不要把密码、带密码参数的完整 URL、二维码或私有日志发到 GitHub Issue / AI 对话中。**
+`workbuddy-web install` checks for the **official** `@tencent-ai/codebuddy-code` CLI, installs it via npm if missing, and starts its native local Web UI. The helper does **not** run any hidden `postinstall` script or bundle Tencent's binaries.
 
-如果 18862 已被其他服务占用，工具会拒绝覆盖；让 Codex 或自己选择其他空闲端口。项目工作目录不等于操作系统级的权限沙箱。
+Open **http://127.0.0.1:18862/** on **your own computer**, enter the **local Web password shown in the private local startup log**, and finish your **personal CodeBuddy account login**. International users should follow the official **International Site** login instructions if they are eligible. Do not share passwords, `?password=` URLs, cookies, QR codes, or private logs in Issues or AI chats.
 
-**常用命令：**
+The default port is local-only. If another app uses 18862, the launcher refuses to terminate it automatically — choose another free port instead. A selected project directory is **not** an OS-level filesystem sandbox.
+
+**Useful commands:**
 ```bash
 workbuddy-web doctor
 workbuddy-web status
@@ -78,45 +100,45 @@ workbuddy-web start
 workbuddy-web stop
 ```
 
-安装包本身不会通过 `postinstall` 自动运行服务；只有你明确执行 `workbuddy-web install --project ...` 才会启动。本仓库**不捆绑腾讯官方 CLI**。
+📸 **[Follow the nine real Windows installation screenshots in the English walkthrough](docs/INSTALL_WITH_CODEX.md).** The screenshots reflect an actual Chinese-language installation, so interface labels may differ for international users.
 
-📸 [查看 Windows 真实安装流程、双层密码与扫码登录的九张图解](docs/INSTALL_WITH_CODEX.md)。
+**Language of the install-success/Star prompt:** it follows your terminal language by default. To override, use `WORKBUDDY_WEB_LANG=en` or `WORKBUDDY_WEB_LANG=zh-CN` in the environment when running `workbuddy-web install`. This changes only the helper's optional messaging, **not** the official CodeBuddy Web UI or account region.
 
-### ⭐ 安装后欢迎自愿点一个 Star
+### ⭐ Optional GitHub Star after successful installation
 
-当 `workbuddy-web install` **成功启动本地 Web** 后，会显示一次可选 Star 邀请：交互式终端按 `y` 才打开本仓库主页，15 秒无回应默认跳过；Codex 等非交互式窗口只会显示项目链接。**不会自动点 Star、不会要求 GitHub 登录信息、不会因为不点 Star 而阻止使用。**
+After a successful `workbuddy-web install`, the helper offers **one optional** link to this repository. In an interactive terminal, answer **y** to open the GitHub project page; after 15 seconds without a response it skips the prompt. In a non-interactive Codex environment, the helper only prints the link.
 
-喜欢这种“ChatGPT + AI 执行工具”的工作方式，欢迎给仓库点一个 ⭐。
+**No automatic starring. No GitHub credentials collected. No penalty if you skip.**
 
-## 🐛 遇到问题？直接向作者反馈
+## 🐛 Report issues and contribute
 
-**GitHub Issues 对外开放，欢迎所有用户参与优化。** 你可以报告 Mac / Windows 安装问题、提出改进建议或分享适配经验：
+Everyone can help improve the project — you do **not** need to wait for the author to find a bug.
 
-- [**提交 Bug / 安装问题**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)（选择「Bug / 安装问题」）
-- [**提出功能建议**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)（选择「功能建议」）
-- [**贡献修复 Pull Request**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/pulls)（先读 [贡献说明](CONTRIBUTING.md)）
+- [**Report an installation problem / Bug**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)
+- [**Request a feature / Share an idea**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose)
+- [**Contribute via a Pull Request**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/pulls) — read [CONTRIBUTING.md](CONTRIBUTING.md)
+- [**Report a vulnerability privately**](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/security/advisories/new)
 
-请提交操作系统、Node/npm/CodeBuddy 版本、复现步骤与**已脱敏**的错误信息；**严禁提交密码、Token、Cookie、真实会话、账号二维码或客户资料**。安全漏洞请走 [私密安全报告](SECURITY.md)，不要直接公开利用细节。
+Please include your OS, Node/npm/official CodeBuddy versions, steps to reproduce, expected/actual behavior, and **redacted** diagnostics. **Never post credentials, real client documents, authentication QR codes, or private conversation history.**
 
-## 🔐 权限、安全与功能边界
+## 🔐 Security and scope
 
-- **本地专用**：CodeBuddy 官方 Web 仅监听 `127.0.0.1`，使用本地 Web 密码、`--agent cli` 和默认 `--permission-mode auto`；不会开启 `0.0.0.0` 或绕过审批。
-- **两层登录**：本地 Web 密码 ≠ CodeBuddy 官方账号；是否能调用模型和实际免费积分取决于个人账户及官方服务。
-- **数据在自己电脑**：本项目不提供云端代理服务，不收集模型 API Key；Windows 私人配置与密码日志使用受限 ACL，macOS 遵循 `0700/0600`。
-- **不是自动互联插件**：人工复制任务及执行结果；作者额外使用自己开发的 Local MCP Toolset，但它不在本仓库中，也不是用户使用此方案的前提。
-- **没有开机自启承诺**：后台服务持续性已测试；系统重启后的自启需要单独配置。本项目不是腾讯、OpenAI 官方产品或其授权代理。
+- CodeBuddy's **official CLI** provides the models, sessions, slash commands, and `/goal` support; this third-party project provides an installer/launcher, not a replacement AI frontend.
+- The Web is bound to **`127.0.0.1` only**, with a password, `--agent cli`, and `--permission-mode auto`. No `--auth none`, public listeners, or `bypassPermissions`.
+- The helper safeguards private local logs: POSIX `0700/0600` on macOS, restricted NTFS ACL on Windows. Your CodeBuddy account and models remain under the provider's terms.
+- The author sometimes uses a separate personal **Local MCP Toolset** with ChatGPT Chat. It is **not part of this repository**, is not required for the manual workflow, and is not documented here.
+- No automatic system reboot startup is promised. Follow your client's permissions and check `workbuddy-web status` if you close Codex.
+- This project is **independent**, **not affiliated with OpenAI, Tencent, or the OpenCode project**. Third-party UI and trademarks remain their owners' property. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-## 🧩 开发与社区
-
-安装器的源代码位于 [bin/](bin/)，安全测试位于 [tests/](tests/)，跨平台 GitHub Actions 在 [.github/workflows/](.github/workflows/)。可以运行：
+## 🧪 Developer notes
 
 ```bash
 npm test
 npm pack --dry-run
 ```
 
-建议先通过 [Issue](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose) 讨论变更，再提交 PR。作者根据复现证据、兼容性和安全要求决定是否合并；开源意味着人人可以反馈，不代表每一条需求都会立即实现。
+Original launcher code: [bin/](bin/) · Tests: [tests/](tests/) · CI: [.github/workflows/](.github/workflows/).
 
-## 📄 许可证与版权说明
+The original launcher code and written documentation are licensed under [MIT](LICENSE); this does not grant rights in third-party brands or UI screenshots. Feedback and contributions are welcome.
 
-本项目原创启动工具代码及文档以 [MIT License](LICENSE) 开源。CodeBuddy、WorkBuddy、ChatGPT、OpenCode 等名称和第三方界面/标识归各自权利人所有；示范截图仅用于说明使用过程，**不属于本仓库 MIT 许可证授予的第三方软件或商标权利**。详见 [第三方声明](THIRD_PARTY_NOTICES.md)。本仓库不提供或重新分发腾讯官方 CLI 二进制。
+**Want to share this project on X?** One sentence: *“Use ChatGPT as your planning and review desk, run coding tasks in CodeBuddy next door, and explore the free credits your region actually offers — one side-by-side workspace, no automatic AI-to-AI messaging required.”*
