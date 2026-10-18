@@ -132,3 +132,18 @@ npm pack --dry-run
 ## 📄 许可证与版权说明
 
 本项目原创启动工具代码及文档以 [MIT License](LICENSE) 开源。CodeBuddy、WorkBuddy、ChatGPT、OpenCode 等名称和第三方界面/标识归各自权利人所有；示范截图仅用于说明使用过程，**不属于本仓库 MIT 许可证授予的第三方软件或商标权利**。详见 [第三方声明](THIRD_PARTY_NOTICES.zh-CN.md)。本仓库不提供或重新分发腾讯官方 CLI 二进制。
+
+## 💬 联系作者｜AI 交流与可选安装协助
+
+欢迎就 **ChatGPT + WorkBuddy 同屏工作台、AI 学习交流及多 AI 协作**与我交流，可以通过以下微信或 Telegram 联系。
+
+如果你希望有人协助完成 **Codex 安装部署、本地 MCP 工具配置，或相关开发环境的排障和调试**，也可以联系我咨询。**一对一安装及技术配置可能属于有偿服务**，具体内容、报价与时间以双方事先沟通确认为准；这是作者独立提供的可选协助，并非 OpenAI 或腾讯官方服务。
+
+| 微信 · **Harvey_AI_365** | Telegram · [**@HARVEY_AI_365**](https://t.me/HARVEY_AI_365) |
+| :---: | :---: |
+| <a href="https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/blob/main/.github/assets/contact-wechat-harvey-ai-365.jpeg"><img src="https://raw.githubusercontent.com/dhy365-creator/chatgpt-workbuddy-workspace/main/.github/assets/contact-wechat-harvey-ai-365.jpeg" width="250" alt="作者微信好友二维码 Harvey_AI_365，点击查看大图"></a> | <a href="https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/blob/main/.github/assets/contact-telegram-harvey-ai-365.jpeg"><img src="https://raw.githubusercontent.com/dhy365-creator/chatgpt-workbuddy-workspace/main/.github/assets/contact-telegram-harvey-ai-365.jpeg" width="250" alt="作者 Telegram 二维码 @HARVEY_AI_365，点击查看大图"></a> |
+| 使用微信扫码 · 点击可查看原图 | [直接在 Telegram 联系](https://t.me/HARVEY_AI_365) · 点击可查看原图 |
+
+**本项目代码和自助安装教程继续免费开源，无需付费，也不需要添加好友才能使用。** 一般性的安装 Bug 和功能建议，建议优先通过 [GitHub Issues](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose) 提交，方便其他使用者一起参考和交流。
+
+为保护账户和隐私，初次联系请不要发送密码、API Key、登录二维码、私人对话记录或客户资料。

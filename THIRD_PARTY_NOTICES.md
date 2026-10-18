@@ -12,4 +12,6 @@ This repository does **not** redistribute Tencent CodeBuddy CLI binaries, packag
 
 `docs/images/*` contains illustrative author-created workflow drawings and edited screenshots of third-party user interfaces. Screenshots are presented to demonstrate installation and interoperability; **the MIT license for this project's original code and written documentation does not grant rights in the underlying third-party UI, trademarks, vendor software or logos.** Use of brand names is for identification only.
 
+The author-provided WeChat and Telegram contact QR images in `.github/assets/` are published only to allow voluntary contact. They are not required for using this open-source project, and their presence does not imply affiliation with WeChat/Telegram or permission to impersonate the author.
+
 If a copyright/trademark holder finds an issue, please use GitHub Issues for non-sensitive requests or a private security advisory for sensitive details. License questions do not change vendor rights.
