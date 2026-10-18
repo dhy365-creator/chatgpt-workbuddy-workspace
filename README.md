@@ -142,3 +142,18 @@ Original launcher code: [bin/](bin/) · Tests: [tests/](tests/) · CI: [.github/
 The original launcher code and written documentation are licensed under [MIT](LICENSE); this does not grant rights in third-party brands or UI screenshots. Feedback and contributions are welcome.
 
 **Want to share this project on X?** One sentence: *“Use ChatGPT as your planning and review desk, run coding tasks in CodeBuddy next door, and explore the free credits your region actually offers — one side-by-side workspace, no automatic AI-to-AI messaging required.”*
+
+## ☕ Connect with the maintainer · Community & optional setup help
+
+Want to exchange ideas about **AI learning, multi-agent workflows, or this project**? You're welcome to reach me on **WeChat** or **Telegram**.
+
+If you prefer hands-on assistance, you can also ask about **Codex installation, local MCP setup, and related development-environment configuration or troubleshooting**. **One-to-one setup assistance may be a paid service**; availability, scope, and fees are agreed directly before any work begins. This is an independent, optional service—not an official OpenAI or Tencent offering.
+
+| WeChat · **Harvey_AI_365** | Telegram · [**@HARVEY_AI_365**](https://t.me/HARVEY_AI_365) |
+| :---: | :---: |
+| <a href="https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/blob/main/.github/assets/contact-wechat-harvey-ai-365.jpeg"><img src="https://raw.githubusercontent.com/dhy365-creator/chatgpt-workbuddy-workspace/main/.github/assets/contact-wechat-harvey-ai-365.jpeg" width="250" alt="WeChat contact QR for Harvey_AI_365; click to enlarge"></a> | <a href="https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/blob/main/.github/assets/contact-telegram-harvey-ai-365.jpeg"><img src="https://raw.githubusercontent.com/dhy365-creator/chatgpt-workbuddy-workspace/main/.github/assets/contact-telegram-harvey-ai-365.jpeg" width="250" alt="Telegram contact QR for @HARVEY_AI_365; click to enlarge"></a> |
+| Scan with WeChat · Click to enlarge | [Message on Telegram](https://t.me/HARVEY_AI_365) · Click to enlarge |
+
+**Using this open-source project and its self-service documentation is free; no purchase or private contact is required.** For reproducible bugs and feature requests, please use [GitHub Issues](https://github.com/dhy365-creator/chatgpt-workbuddy-workspace/issues/new/choose), so the community can benefit from the answers.
+
+Please do **not** send passwords, API keys, authentication QR codes, private conversations, or client files in an initial message.
