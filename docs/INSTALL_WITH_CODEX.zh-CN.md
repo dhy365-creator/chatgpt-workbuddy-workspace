@@ -6,7 +6,7 @@
 
 **本项目让 CodeBuddy CLI 启动官方本地 Web，便于与 ChatGPT 同屏协作。** ChatGPT 负责沟通、审核，CodeBuddy 负责具体执行；任务与结果目前通过**人工交接**，不是两个 AI 自动互联。
 
-> 🌐 **国际版提示：** 海外用户使用相同 `@tencent-ai/codebuddy-code` CLI；首次官方登录应按自身地区选择 International Site。WorkBuddy 全球版 Free 基础额度为每月 100 积分（限时活跃奖励另外按官方规则计算），不同于国内体验版每月 500 积分。参见 [国际版官方定价](https://www.workbuddy.ai/docs/workbuddy/pricing) 和 [CLI 登录选择](https://www.codebuddy.ai/docs/cli/quickstart)。
+> 🌐 **国际版提示：** 海外用户使用相同 `@tencent-ai/codebuddy-code` CLI；首次官方登录应按自身地区选择 International Site。WorkBuddy 国际版 Free 基础额度为每月 100 积分，不同于国内体验版每月 500 积分；**每天 30 积分的限时活跃奖励不计入网页端发起的对话与任务**，需使用符合规则的官方客户端并满足活动条件。参见 [国际版官方定价](https://www.workbuddy.ai/docs/workbuddy/pricing) 和 [CLI 登录选择](https://www.codebuddy.ai/docs/cli/quickstart) 和 [官方每日活跃细则](https://www.codebuddy.ai/docs/workbuddy/Subscription)。
 
 ## 两种安装方式
 

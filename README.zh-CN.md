@@ -14,11 +14,11 @@
 
 ### 🌍 国内版与国际版都可以尝试
 
-海外用户使用的国际版 **CodeBuddy / WorkBuddy** 也提供 Free 计划。根据官方 2026-10-18 的公开定价信息，国内个人体验版基础额度为 **每月 500 积分**；国际版 Free 计划为 **每月 100 基础积分**，还可能获得符合条件的 **每日 30 积分限时活跃奖励**。两套权益属于不同地区的官方政策，**不能将国内 500 积分当作海外额度，也不能宣称无限免费 Token**。
+海外用户使用的国际版 **CodeBuddy / WorkBuddy** 也提供 Free 计划。根据官方 2026-10-18 的公开定价信息，国内个人体验版基础额度为 **每月 500 积分**；国际版 Free 计划为 **每月 100 基础积分**，还可能获得符合条件的 **每日 30 积分限时活跃奖励**。两套权益属于不同地区的官方政策。**国际版限时每日 30 积分活动明确不计入网页端发起的对话或任务**；只有符合活动条件的官方客户端活动才可能计入。**不能将国内 500 积分当作海外额度，也不能宣称无限免费 Token**。
 
 国际用户可以使用相同的官方 `@tencent-ai/codebuddy-code` CLI，首次登录按官方页面选择 **International Site（国际站）**，然后使用本项目的启动工具。此流程的海外账户登录细节尚未由作者逐区验证，实际支持情况以当地服务与个人账号为准。
 
-官方：[国内体验版](https://www.workbuddy.cn/docs/workbuddy/Pricing) · [国际版 Free 价格](https://www.workbuddy.ai/docs/workbuddy/pricing) · [CodeBuddy 英文登录说明](https://www.codebuddy.ai/docs/cli/quickstart)。
+官方：[国内体验版](https://www.workbuddy.cn/docs/workbuddy/Pricing) · [国际版 Free 价格](https://www.workbuddy.ai/docs/workbuddy/pricing) · [CodeBuddy 英文登录说明](https://www.codebuddy.ai/docs/cli/quickstart) · [国际版官方活跃奖励细则](https://www.codebuddy.ai/docs/workbuddy/Subscription)。
 
 ## ✨ 为什么值得尝试？
 

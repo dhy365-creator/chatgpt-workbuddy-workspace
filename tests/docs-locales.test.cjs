@@ -27,6 +27,10 @@ test('English and Chinese entrypoints, pricing disclaimers and assets stay in sy
     assert.match(source, /github:dhy365-creator\/chatgpt-workbuddy-workspace#v0\.2\.2/);
     assert.match(source, /CodeBuddy/);
   }
+  assert.match(en, /Web conversations\/tasks do NOT qualify/);
+  assert.match(zh, /不计入网页端/);
+  assert.match(installEn, /Web-based conversations\/tasks do not qualify/);
+  assert.match(installZh, /不计入网页端/);
   assert.match(en, /International Site/);
   assert.match(en, /manual handoff/);
   assert.match(zh, /人工交接/);

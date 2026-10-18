@@ -18,7 +18,7 @@
 <text x="472" y="394" font-family="Arial,Helvetica,sans-serif" font-size="49" fill="#B98930" font-weight="750">100</text>
 <text x="472" y="425" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#687B70" font-weight="400">100 base credits / mo</text>
 <rect x="468" y="460" width="295" height="33" rx="16" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
-<text x="481" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#B98930" font-weight="600">Conditional: +30 / active day</text>
+<text x="481" y="484" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#B98930" font-weight="600">Web does not earn +30/day</text>
 <rect x="830" y="179" width="342" height="338" rx="24" fill="#F6F8FC" stroke="#DEE7F2" stroke-width="2" filter="url(#soft)"/>
 <rect x="857" y="211" width="286" height="55" rx="15" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2"/>
 <text x="872" y="245" font-family="Arial,Helvetica,sans-serif" font-size="23" fill="#263B34" font-weight="700">WorkBuddy / CodeBuddy</text>

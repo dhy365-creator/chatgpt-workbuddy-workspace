@@ -52,10 +52,10 @@ Select the site that is actually appropriate for **your account and location**. 
 
 | Account region | Free plan noted by the official provider | Important details |
 | --- | --- | --- |
-| **International** | **100 base credits/month** | A **limited-time 30 credits/day activity reward** may be available if you meet the program's criteria. |
+| **International** | **100 base credits/month** | Limited-time **30/day bonus** has separate conditions: **Web-based conversations/tasks do not qualify**; only qualifying activity in an official WorkBuddy/CodeBuddy client may count. |
 | **China** | **500 base credits/month** | A different domestic plan, **not** the international Free tier. |
 
-Read [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing), [CodeBuddy international login](https://www.codebuddy.ai/docs/cli/quickstart), and [China domestic plans](https://www.workbuddy.cn/docs/workbuddy/Pricing) for current information. Checked October 18, 2026. Promotions, login availability, eligibility and model access can change; **no unlimited free tokens or worldwide equivalence is promised**.
+Read [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing), [CodeBuddy international login](https://www.codebuddy.ai/docs/cli/quickstart), and [China domestic plans](https://www.workbuddy.cn/docs/workbuddy/Pricing) for current information. Checked October 18, 2026. Promotions, login availability, eligibility and model access can change. **Opening CodeBuddy Web using this project does not itself make you eligible for the 30/day activity reward.** Official [activity terms](https://www.codebuddy.ai/docs/workbuddy/Subscription). **No unlimited free tokens or worldwide equivalence is promised.**
 
 > **What about OpenCode?** You can manually apply the ChatGPT-plan/another-agent-executes workflow to any terminal or Web-enabled agent. This repository currently **only** automates CodeBuddy's native Web startup; it does **not** install OpenCode.
 

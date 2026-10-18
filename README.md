@@ -29,11 +29,11 @@ You probably already have an AI assistant you like. But coding agents live in se
 
 | Provider / account region | Official free-plan information | Important distinction |
 | --- | --- | --- |
-| **WorkBuddy / CodeBuddy — International** | **100 base credits/month**; an additional **30 credits per active day** may be available during a limited-time promotion. | Daily rewards and promotional model access have eligibility rules and can change. |
+| **WorkBuddy / CodeBuddy — International** | **100 base credits/month**. | A limited-time **30/day activity bonus** exists, but **Web conversations/tasks do NOT qualify**; only eligible activity through official WorkBuddy/CodeBuddy clients counts under the promotion rules. |
 | **WorkBuddy / CodeBuddy — China** | **500 base credits/month** on the domestic personal trial tier. | **Not** the same entitlement as the international Free plan. |
 | **OpenCode Zen** | Certain listed models are marked **Free**. | Free-model availability, limits, and provider requirements vary. **This repository does not install OpenCode.** |
 
-Sources: [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing) · [CodeBuddy international pricing](https://www.codebuddy.ai/docs/ide/Account/pricing) · [China domestic plan](https://www.workbuddy.cn/docs/workbuddy/Pricing) · [OpenCode Zen](https://opencode.ai/docs/zen/). Checked October 18, 2026; **always confirm current terms**. No unlimited tokens, credit transfers, or quota bypasses are promised.
+Sources: [WorkBuddy international pricing](https://www.workbuddy.ai/docs/workbuddy/pricing) · [CodeBuddy international pricing](https://www.codebuddy.ai/docs/ide/Account/pricing) · [China domestic plan](https://www.workbuddy.cn/docs/workbuddy/Pricing) · [OpenCode Zen](https://opencode.ai/docs/zen/). Checked October 18, 2026; **always confirm current terms**. See the [international activity policy](https://www.codebuddy.ai/docs/workbuddy/Subscription): **Web-initiated conversations/tasks do not count toward the 30/day activity promotion**. No unlimited tokens, credit transfers, or quota bypasses are promised.
 
 ![Regional free-plan differences and optional free-model execution paths](docs/images/vision-free-credits.en.svg)
 
